@@ -1,0 +1,9 @@
+Tugas Hari Pertama
+Belajar Git dan Github
+
+Data Peserta Sanbercode Bootcamp ReactJS
+1. Nama: M. Puji Tresna Prayoga
+2. Email: tresnayoga@gmail.com
+3. Sistem Operasi yang digunakan: Windows 10
+4. Akun Gitlab/Github: yogatresnaa  ( Github )
+5. Akun Telegram: Puji Tresna
