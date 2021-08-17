@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div style="width: 150px; height: 30px; background-color: aquamarine;
+    text-align: center; margin: auto; padding: 10px; cursor: pointer">
+    <table id="table_mahasiswa" class="display" style="width: 100%;">
+    <thead>
+        <tr>
+            <td>nim</td>
+            <td>nama</td>
+            <td>Phone</td>
+            <td>Alamat</td>
+            <td>Rangking</td>
+        </tr>
+    </thead>
+    <tbody></tbody>
+    </table>    
+</div>
+
+<script>
+    function get_data(){
+        var data_json = new object();
+        data_json.processing_code ='3';
+        $.ajax({
+                contentType:'application/json',
+                dataType:"json",
+                url:'http://103.41.204.105:8080/mahasiswa_server/Online',
+                data:JSON.stringify(data_json),
+                type:'post',
+                success: function(response){
+                    if(response.rsep_code ===00){
+                        let tb_dt = JSON.parse(response.listnilai);
+                        $('$table_mahasiswa').DataTable({
+                            data:tb_td,
+                            dataType:'json',
+                            retrive:true;
+                            paging:true;
+                            searching:true,
+                            columns
+                        })
+                    }
+                }
+    }
+</script>
+    
+</body>
+</html>
